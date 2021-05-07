@@ -30,4 +30,5 @@ namespace CharacterCreator.Data
             return new ApplicationDbContext();
         }
     }
+    //Test comment
 }
