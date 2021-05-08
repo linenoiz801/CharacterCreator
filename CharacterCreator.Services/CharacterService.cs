@@ -22,7 +22,8 @@ namespace CharacterCreator.Services
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Characters.
+                ctx.Characters.Add(entity);
+                return ctx.SaveChanges() == 1;
             }
         }
     }
