@@ -25,5 +25,24 @@ namespace CharacterCreator.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public IEnumerable<TeamListItem> GetTeams()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Teams
+                        .Select(
+                            e =>
+                                new TeamListItem
+                                {
+                                    Id = e.Id,
+                                    TeamName = e.TeamName,
+                                    TeamDescription = e.TeamDescription
+                                }
+                        );
+                return query.ToArray();
+            }
+        }
     }
 }
