@@ -1,4 +1,4 @@
-﻿using CharacterCreator.Models;
+using CharacterCreator.Models;
 using CharacterCreator.Services;
 using System;
 using System.Collections.Generic;
@@ -62,6 +62,16 @@ namespace CharacterCreator.WebAPI.Controllers
                 return InternalServerError();
 
             return Ok();
+        }
+        public List<string> GetCharClasses()
+        {
+            List<string> result = new List<string>();
+            result.Add("Fighter");
+            result.Add("Mage");
+            result.Add("Thief");
+            result.Add("paladin");
+
+            return result;
         }
     }
 }
