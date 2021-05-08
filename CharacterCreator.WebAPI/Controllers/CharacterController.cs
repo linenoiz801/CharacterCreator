@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterCreator.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,6 +8,7 @@ using System.Web.Http;
 
 namespace CharacterCreator.WebAPI.Controllers
 {
+    [Authorize]
     public class CharacterController : ApiController
     {
         public List<string> GetRaces()

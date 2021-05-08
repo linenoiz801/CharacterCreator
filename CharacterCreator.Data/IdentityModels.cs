@@ -31,5 +31,7 @@ namespace CharacterCreator.Data
             return new ApplicationDbContext();
         }
         public DbSet<CharacterAttributes> CharacterAttributes { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<TeamAssignment> TeamAssignments { get; set; }
     }    
 }
