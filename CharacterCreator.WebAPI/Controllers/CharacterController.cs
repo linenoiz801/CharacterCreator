@@ -33,5 +33,15 @@ namespace CharacterCreator.WebAPI.Controllers
 
             return result;
         }
+        public List<string> GetPhysAttributes()
+        {
+            List<string> result = new List<string>();
+            result.Add("Weight");
+            result.Add("Height");
+            result.Add("Hair Color");
+            result.Add("Eye color");
+
+            return result;
+        }
     }
 }
