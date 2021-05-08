@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterCreator.Models
 {
-    public class CharacterAttibutesListItem
+    public class CharacterAttributesListItem
     {
         public string Attribute { get; set; }        
         public string Value { get; set; }        
