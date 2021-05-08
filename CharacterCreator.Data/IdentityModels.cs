@@ -31,5 +31,6 @@ namespace CharacterCreator.Data
             return new ApplicationDbContext();
         }
         public DbSet<CharacterAttributes> CharacterAttributes { get; set; }
+        public DbSet<Character> Characters { get; set; }
     }    
 }

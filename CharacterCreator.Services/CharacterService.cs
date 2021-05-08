@@ -1,4 +1,5 @@
-﻿using CharacterCreator.Models;
+﻿using CharacterCreator.Data;
+using CharacterCreator.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,18 @@ namespace CharacterCreator.Services
     {
         public bool CreateCharacter(CharacterCreate model)
         {
+            var entity =
+                new Character()
+                {
+                    Name = model.Name,
+                    Age = model.Age,
+                    History = model.History
+                };
 
+            using (var ctx = new ApplicationDbContext())
+            {
+                ctx.Characters.
+            }
         }
     }
 }
