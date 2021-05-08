@@ -19,8 +19,8 @@ namespace CharacterCreator.Data
         //public int SkillsId {get; set}
         //public virtual Skill Skills {get; set;}
 
-        //public enum Race TypeOfRace {get; set}
-        //public enum Skill TypeOfSkill {get;set;}
+        //public List<string> Race {get; set}
+        //public List<string> Skill {get;set;}
         
         [Required]
         public string History { get; set; }
