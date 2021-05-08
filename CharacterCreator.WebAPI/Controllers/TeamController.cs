@@ -28,5 +28,11 @@ namespace CharacterCreator.WebAPI.Controllers
 
             return Ok();
         }
+        public IHttpActionResult GetAll()
+        {
+            TeamService teamService = CreateTeamService();
+            var teams = teamService.GetTeams();
+            return Ok(teams);
+        }
     }
 }
