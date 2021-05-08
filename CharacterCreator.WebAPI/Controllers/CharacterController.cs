@@ -43,5 +43,15 @@ namespace CharacterCreator.WebAPI.Controllers
 
             return result;
         }
+        public List<string> GetCharClasses()
+        {
+            List<string> result = new List<string>();
+            result.Add("Fighter");
+            result.Add("Mage");
+            result.Add("Thief");
+            result.Add("paladin");
+
+            return result;
+        }
     }
 }
