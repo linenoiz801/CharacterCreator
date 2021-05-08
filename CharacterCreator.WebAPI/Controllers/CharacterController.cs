@@ -1,4 +1,5 @@
-﻿using CharacterCreator.Services;
+﻿using CharacterCreator.Models;
+using CharacterCreator.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,6 +50,18 @@ namespace CharacterCreator.WebAPI.Controllers
         {
             var characterService = new CharacterService();
             return characterService;
+        }
+        public IHttpActionResult Post(CharacterCreate character)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateCharacterService();
+
+            if (!service.CreateCharacter(character))
+                return InternalServerError();
+
+            return Ok();
         }
     }
 }
