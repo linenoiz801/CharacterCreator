@@ -1,4 +1,5 @@
-﻿using CharacterCreator.Services;
+using CharacterCreator.Models;
+using CharacterCreator.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,23 @@ namespace CharacterCreator.WebAPI.Controllers
             result.Add("Eye color");
 
             return result;
+        }
+        private CharacterService CreateCharacterService()
+        {
+            var characterService = new CharacterService();
+            return characterService;
+        }
+        public IHttpActionResult Post(CharacterCreate character)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var service = CreateCharacterService();
+
+            if (!service.CreateCharacter(character))
+                return InternalServerError();
+
+            return Ok();
         }
         public List<string> GetCharClasses()
         {
