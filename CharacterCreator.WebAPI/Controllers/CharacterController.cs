@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterCreator.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,6 +8,7 @@ using System.Web.Http;
 
 namespace CharacterCreator.WebAPI.Controllers
 {
+    [Authorize]
     public class CharacterController : ApiController
     {
         public List<string> GetRaces()
@@ -42,6 +44,11 @@ namespace CharacterCreator.WebAPI.Controllers
             result.Add("Eye color");
 
             return result;
+        }
+        private CharacterService CreateCharacterService()
+        {
+            var characterService = new CharacterService();
+            return characterService;
         }
     }
 }
