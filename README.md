@@ -5,9 +5,9 @@ Team.
 
 [Trello board](https://trello.com/b/ImMRm87i/blue-badge-agile-team-project)
 
-##Create characters - give them physical and character attributes. 
-##Balance their skills/traits by organizing teams for narrative purposes
-##----------------------------------------------------------------------
+## Create characters - give them physical and character attributes. 
+## Balance their skills/traits by organizing teams for narrative purposes
+## ----------------------------------------------------------------------
 
 1) A user needs to be able to create a new character
 	- Creating a new character will build an empty profile 
