@@ -1,3 +1,4 @@
+using CharacterCreator.Data;
 using CharacterCreator.Models;
 using CharacterCreator.Services;
 using System;
@@ -72,6 +73,11 @@ namespace CharacterCreator.WebAPI.Controllers
             result.Add("paladin");
 
             return result;
+        }
+        public List<Character> GetCharacters()
+        {
+            List<Character> characters = new List<Character>();
+            return characters;
         }
     }
 }
