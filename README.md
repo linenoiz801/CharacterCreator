@@ -1,13 +1,14 @@
 # Character Creator
+## Create characters - give them physical and character attributes. 
+## Balance their skills/traits by organizing teams for narrative purposes
+
 A simple D&D Style Character Creation program that will allow a user to build a character
 profile and assign attributes. Once characters are created, they can then be assigned to a 
 Team.
 
 [Trello board](https://trello.com/b/ImMRm87i/blue-badge-agile-team-project)
 
-## Create characters - give them physical and character attributes. 
-## Balance their skills/traits by organizing teams for narrative purposes
-## ----------------------------------------------------------------------
+# User Stories
 
 1) A user needs to be able to create a new character
 	- Creating a new character will build an empty profile 
