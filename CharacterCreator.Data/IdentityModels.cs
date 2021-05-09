@@ -29,6 +29,9 @@ namespace CharacterCreator.Data
         {
             return new ApplicationDbContext();
         }
-    }
-    //Test comment
+        public DbSet<CharacterAttributes> CharacterAttributes { get; set; }
+        public DbSet<Character> Characters { get; set; }
+        public DbSet<Team> Teams { get; set; }
+        public DbSet<TeamAssignment> TeamAssignments { get; set; }
+    }    
 }
